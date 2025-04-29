@@ -12,9 +12,12 @@ def load_data(filepath):
 
 def clean_numerical_columns(df):
     """Clean numerical columns by filling missing values."""
-    df["base_friendship"] = df["base_friendship"].fillna(df["base_friendship"].mode()[0])
-    df["base_experience"] = df["base_experience"].fillna(df["base_experience"].mode()[0])
-    df["percentage_male"] = df["percentage_male"].fillna(df["percentage_male"].mode()[0])
+    df["base_friendship"] = df["base_friendship"].fillna(
+        df["base_friendship"].mode()[0])
+    df["base_experience"] = df["base_experience"].fillna(
+        df["base_experience"].mode()[0])
+    df["percentage_male"] = df["percentage_male"].fillna(
+        df["percentage_male"].mode()[0])
     return df
 
 
@@ -35,21 +38,10 @@ def drop_unnecessary_columns(df):
     return df
 
 
-# def enrich_dataset(df):
-    """Add new features to enrich the dataset."""
-    df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
-    bins = [-1, 12, 20, 40, 60, 100]
-    labels = ["Child", "Teen", "Young Adult", "Adult", "Senior"]
-    df["AgeGroup"] = pd.cut(df["Age"], bins=bins, labels=labels)
-    return df
-
-
 def load_and_clean_data(filepath):
     """Load and clean the Pokemon dataset."""
     df = load_data(filepath)
     df = clean_numerical_columns(df)
     df = clean_categorical_columns(df)
     df = drop_unnecessary_columns(df)
-    # df = enrich_dataset(df)
     return df
-
