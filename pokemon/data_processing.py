@@ -2,9 +2,6 @@ import streamlit as st
 import pandas as pd
 
 
-file_path = "./pokemon.csv"
-
-
 def load_data(filepath):
     """Load the Titanic dataset from a CSV file."""
     return pd.read_csv(filepath)

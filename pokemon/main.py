@@ -4,12 +4,6 @@ from input import get_image, get_input
 from visualisation import display_details
 from graphs import calculate_bmi, display_graph
 import pandas as pd
-# from app.data_processing import load_and_clean_data
-# from app.filters import apply_filters
-# from app.metrics_visuals import (
-#     display_metrics,
-#     display_visualizations,
-# )
 
 
 def main():
@@ -24,7 +18,7 @@ def main():
     st.title("Pokédex")
 
     # Load and clean the data
-    df = load_and_clean_data("pokemon.csv")
+    df = load_and_clean_data("./pokemon.csv")
 
     # get input and display pokemon name
     pokedex_numb = get_input()
