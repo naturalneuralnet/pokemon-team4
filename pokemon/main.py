@@ -8,7 +8,7 @@ import pandas as pd
 
 BASE_DIR = Path('main.py').resolve().parent
 
-DATA_PATH = BASE_DIR / 'data' / 'pokemon.csv'
+DATA_PATH = BASE_DIR / 'pokemon' / 'data' / 'pokemon.csv'
 
 
 def main():
