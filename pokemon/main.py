@@ -3,7 +3,12 @@ from data_processing import load_and_clean_data
 from input import get_image, get_input
 from visualisation import display_details
 from graphs import calculate_bmi, display_graph
+from pathlib import Path
 import pandas as pd
+
+BASE_DIR = Path('main.py').resolve().parent
+
+DATA_PATH = BASE_DIR / 'data' / 'pokemon.csv'
 
 
 def main():
@@ -18,8 +23,8 @@ def main():
     st.title("Pokédex")
 
     # Load and clean the data
-    filepath = "data/pokemon.csv"
-    df = load_and_clean_data(filepath)
+    # filepath = "data/pokemon.csv"
+    df = load_and_clean_data(DATA_PATH)
 
     # get input and display pokemon name
     pokedex_numb = get_input()

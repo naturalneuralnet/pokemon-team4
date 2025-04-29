@@ -4,6 +4,7 @@ import pandas as pd
 
 def load_data(filepath):
     """Load the dataset from a CSV file."""
+    print(filepath)
     df = pd.read_csv(filepath)
     return df
 
