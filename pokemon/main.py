@@ -1,4 +1,6 @@
 import streamlit as st
+from data_processing import load_and_clean_data
+import pandas as pd
 # from app.data_processing import load_and_clean_data
 # from app.filters import apply_filters
 # from app.metrics_visuals import (
@@ -19,8 +21,11 @@ def main():
     st.title("Pokédex")
 
     # Load and clean the data
-    df = load_and_clean_data("./pokemon.csv")
+    df = load_and_clean_data("pokemon.csv")
 
+    st.title("Pokémon Dataset")
+    st.write("This dataset contains information about various Pokémon, including their types, abilities, and base stats.")
+    st.dataframe(df)
     # # Apply filters
     # filtered_df = apply_filters(df)
 
