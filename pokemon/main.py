@@ -18,7 +18,8 @@ def main():
     st.title("Pokédex")
 
     # Load and clean the data
-    df = load_and_clean_data("./pokemon.csv")
+    filepath = "data/pokemon.csv"
+    df = load_and_clean_data(filepath)
 
     # get input and display pokemon name
     pokedex_numb = get_input()
