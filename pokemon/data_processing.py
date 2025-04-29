@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-file_path = "pokemon.csv"
+file_path = "./pokemon.csv"
 
 
 def load_data(filepath):
