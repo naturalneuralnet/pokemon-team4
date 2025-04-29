@@ -10,8 +10,8 @@ import streamlit as st
 def main():
     """Main function to run the Streamlit app."""
     st.set_page_config(
-        page_title="Titanic Dashboard",
-        page_icon="🚢",
+        page_title="Pokédex Dashboard",
+        page_icon="⚡️"
         layout="wide",
         initial_sidebar_state="auto",
     )
