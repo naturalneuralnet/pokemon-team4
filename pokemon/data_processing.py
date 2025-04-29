@@ -3,8 +3,9 @@ import pandas as pd
 
 
 def load_data(filepath):
-    """Load the Titanic dataset from a CSV file."""
-    return pd.read_csv(filepath)
+    """Load the dataset from a CSV file."""
+    df = pd.read_csv(filepath)
+    return df
 
 
 def clean_numerical_columns(df):
