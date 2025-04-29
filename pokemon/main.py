@@ -11,9 +11,9 @@ def main():
     """Main function to run the Streamlit app."""
     st.set_page_config(
         page_title="Pokédex Dashboard",
-        page_icon="⚡️"
+        page_icon="⚡️",
         layout="wide",
-        initial_sidebar_state="auto",
+        initial_sidebar_state="auto"
     )
     # Set the title of the app
     st.title("Pokédex")
