@@ -1,5 +1,7 @@
 import streamlit as st
 from data_processing import load_and_clean_data
+from input import get_image, get_input
+from visualisation import display_details
 import pandas as pd
 # from app.data_processing import load_and_clean_data
 # from app.filters import apply_filters
@@ -22,6 +24,12 @@ def main():
 
     # Load and clean the data
     df = load_and_clean_data("pokemon.csv")
+
+    # get input and display pokemon name
+    pokedex_numb = get_input()
+    image_url = get_image(pokedex_numb)
+
+    display_details(pokedex_numb, df, image_url)
 
     st.title("Pokémon Dataset")
     st.write("This dataset contains information about various Pokémon, including their types, abilities, and base stats.")
